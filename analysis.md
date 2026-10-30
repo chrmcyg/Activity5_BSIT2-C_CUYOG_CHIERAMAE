@@ -1,0 +1,3 @@
+# Analysis
+
+The linked-list stack pushes and pops at the head because a singly linked list gives O(1) access only to the head: inserting there just needs the new node to point at the old top, and removing just moves the head to `head.next`. Working at the tail would make `pop` O(n), since we would have to walk the whole list to find the second-to-last node (there is no backward pointer). The array queue must be circular because a naive array either wastes the slots freed at the front as `front` moves forward, or must shift every element left after each dequeue, making `dequeue` O(n). Using modulo arithmetic lets `front` and the rear position wrap to index 0, so freed slots are reused and both `enqueue` and `dequeue` stay O(1).

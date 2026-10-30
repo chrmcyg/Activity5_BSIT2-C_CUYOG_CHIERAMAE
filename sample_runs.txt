@@ -1,0 +1,13 @@
+--- ArrayStack overflow/underflow ---
+Error: Stack overflow: cannot push onto a full stack
+Error: Stack underflow: cannot pop from an empty stack
+--- LinkedStack underflow ---
+Error: Stack is empty: nothing to peek
+--- ArrayQueue wrap-around (capacity 3) ---
+Queue (front -> rear): ['A', 'B', 'C']  | raw array: ['A', 'B', 'C'], front index=0
+Error: Queue overflow: cannot enqueue into a full queue
+dequeue -> A | B
+Queue (front -> rear): ['C', 'D', 'E']  | raw array: ['D', 'E', 'C'], front index=2
+--- LinkedQueue underflow ---
+Queue (front -> rear): [] | rear is None: True
+Error: Queue underflow: cannot dequeue from an empty queue
